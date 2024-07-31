@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , intial-scale=1.0">
+    <link rel="stylesheet" href="nlogin.css">
+    
+    <body> 
+      <main>
+        <div class="header">
+          <header>
+              <img src="logo-removebg.png" alt="">
+          </header>
+      </div>
+      <div class="parent">
+        <div class="sign-in-container">
+            <div class="sign-in-form-container">
+              <form class="sign-in-form">
+                <h1 class="sign-in-heading">Sign In</h1>
+                <input class="email-input" type="email" placeholder="Email or phone number">
+                <button class="sign-in-button" type="submit">Send sign-in code</button>
+                <h2 class="OR">OR</h2>
+                <button class="use-password-button" type="submit">Use password</button>
+                <p class="forgot-text">Forgot email or phone number?</p>
+              </form>
+              <div class="tickbox">
+              <label>
+                <input type="checkbox">
+                <span class="custom-checkbox"></span>
+                Remember me
+            </label>
+          </div>
+              <p class="sign-up-text">New to Netflix? <a href="#">Sign up now.</a></p>
+            </div>
+            <div class="recaptcha-container">
+              <p class="recaptcha-text">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#" style="color: rgb(0, 103, 193);text-decoration-line:underline;">Learn more.</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="foot">
+          <div class="foot1">
+          <p1>Questions? Call 000-800-919-1694</p1>
+          <ul>
+            <li>FAQ</li>
+            <li>Help Centre</li>
+            <li>Terms of Use</li>
+            <li>Privacy</li>
+            <li>Cookie Preferences</li>
+            <li>Corporate Information</li>
+          </ul>
+          </div>
+          <div class="language-selector">
+            <label for="language"></label>
+            <select id="language">
+              <option value="english">English</option>
+              <option value="hindi">हिंदी</option>
+            </select>
+          </div>
+          </div>
+        </main>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const signInForm = document.querySelector('.sign-in-form');
+              const emailInput = document.querySelector('.email-input');
+              const signInButton = document.querySelector('.sign-in-button');
+              const usePasswordButton = document.querySelector('.use-password-button');
+      
+              signInForm.addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent form submission
+      
+                  // Validate email or phone number
+                  const emailOrPhone = emailInput.value.trim();
+                  if (!emailOrPhone) {
+                      alert('Please enter your email or phone number.');
+                      return;
+                  }
+      
+                  // Simple regex for email validation
+                  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                  // Simple regex for phone number validation (basic, adjust as needed)
+                  const phoneRegex = /^\d{10}$/;
+      
+                  if (!emailRegex.test(emailOrPhone) && !phoneRegex.test(emailOrPhone)) {
+                      alert('Please enter a valid email or phone number.');
+                      return;
+                  }
+      
+                  // If validation passes, you can proceed with form submission or further processing
+                  // For demonstration, let's just alert a success message
+                  alert('Validation successful!');
+              });
+      
+              // Optionally, add event listeners for the "Use password" button to handle password validation
+          });
+      </script>
+    </body>
+
+
+</html>

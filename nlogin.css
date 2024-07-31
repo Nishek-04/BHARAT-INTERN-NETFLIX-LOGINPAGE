@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    overflow: auto ; /* Prevent body overflow */
+}
+header{
+    background-color: transparent;
+}
+header img{
+    width: 200px;
+    height: 100px;
+    padding-left: 130px;
+}
+.sign-in-container {
+    height: 650px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .sign-in-form-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sign-in-form {
+    width: 100%;
+  }
+  
+  .sign-in-heading {
+    padding-left: 40px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+  }
+  
+  .email-input {
+    color:white;
+    padding: 18px;
+    margin: 10px 30px 10px 40px;
+    border: 1px solid #979191;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 71%;
+    background-color: rgba(36, 35, 35, 0.7);
+  }
+  
+  .sign-in-button {
+    padding: 10px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 30px 0px 40px;
+    cursor: pointer;
+    width: 80%;
+  }
+  .use-password-button {
+    padding: 10px;
+    background-color: rgba(150, 150, 150, 0.5);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 0px 30px 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80%;
+  }
+  input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom styling for the checkbox container */
+.custom-checkbox {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border: 1px solid #333;
+    position: relative;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.custom-checkbox:hover{
+  border-color: white;
+}
+/* Styling for the tick when checkbox is checked */
+.custom-checkbox::after {
+    content: "\2713"; /* Unicode character for a checkmark */
+    font-size: 18px;
+    color: black; /* Set the tick color to black */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+}
+
+/* Change background color to white when checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: white;
+}
+
+/* Show the tick when checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+}
+label{
+  margin-left: 60px;
+  color:white;
+}
+.tickbox{
+  justify-content: baseline;
+  align-items: last baseline;
+  display: flex;
+  height: 100px;
+}
+  .forgot-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .sign-up-text {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 110px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .sign-up-text a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .recaptcha-container {
+    width: 70%;
+    max-width: 400px;
+    margin-top: -10px;
+  }
+  
+  .recaptcha-text {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .recaptcha-text a {
+    color: #666;
+    text-decoration: none;
+  }
+  .parent{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: auto;
+  }
+  .OR{
+    padding-left: 180px;
+    margin-bottom: 20px;
+    color: rgb(130, 125, 125);
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+  }
+.foot{
+  position: relative;
+  margin-top: 500px;
+  height: 300px;
+  color: white;
+  background-color: rgba(0, 0, 0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space{
+  overflow: auto;
+}
+main{
+  overflow: auto;
+  background-size: 150%;
+}
+main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('bg.jpeg');
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+.foot1{
+  background-color:transparent;
+  width:1200px;
+  height: 150px;
+  margin-right: 250px;
+  margin-left: 200px;
+}
+.foot1 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.foot1 li {
+  width: 48%;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+/* Other styles remain the same */
+
+.language-selector {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(95, 95, 95);
+  padding: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select {
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #333; /* Set the background color */
+  color: white; /* Set the text color */
+  border: 1px solid #fff7f7; /* Set border color */
+}
+
+
